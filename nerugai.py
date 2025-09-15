@@ -55,7 +55,8 @@ if __name__ == '__main__':
     application = ApplicationBuilder().token(BOT_TOKEN).build()
 
     start_handler = CommandHandler('start', start)
-    start_handler = CommandHandler('mat', mat)
+    mat_handler = CommandHandler('mat', mat)
     application.add_handler(start_handler)
+    application.add_handler(mat_handler)
 
     application.run_polling()
