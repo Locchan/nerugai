@@ -52,7 +52,7 @@ async def roulette():
     return random.choice(LOTS)
 
 if __name__ == '__main__':
-    application = ApplicationBuilder().token('TOKEN').build()
+    application = ApplicationBuilder().token(BOT_TOKEN).build()
 
     start_handler = CommandHandler('start', start)
     start_handler = CommandHandler('mat', mat)
