@@ -41,10 +41,10 @@ async def mat(update: Update, context: ContextTypes.DEFAULT_TYPE):
     MAT_COUNTER+=1
     MAT_TOTAL+=1
     if MAT_COUNTER == 5:
-        MAT_COUNTER = 0
         await context.bot.send_message(chat_id=update.effective_chat.id, text=f"КРУТИМ! Мат №{MAT_COUNTER} ({MAT_TOTAL} всего).")
         roulette_result = await roulette()
         await context.bot.send_message(chat_id=update.effective_chat.id, text=f"Приз: {roulette_result}")
+        MAT_COUNTER = 0
         return
     await context.bot.send_message(chat_id=update.effective_chat.id, text=f"Мат №{MAT_COUNTER} ({MAT_TOTAL} всего).")
 
